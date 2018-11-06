@@ -1,0 +1,11 @@
+
+// Variables
+@import 'variables';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+.loadmodal{position: fixed;top: 0;right: 0;bottom: 0;left: 0;overflow: hidden;outline: 0;-webkit-overflow-scrolling: touch;background-color: rgb(0, 0, 0);filter: alpha(opacity=60);background-color: rgba(0, 0, 0, 0.6);z-index: 9999;}
+.loading{max-width: 150px;max-height: 150px;margin: 0 auto;margin-top: 23%;}
+.loading img{border-radius: 5px}
