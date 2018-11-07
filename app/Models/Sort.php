@@ -13,7 +13,7 @@ class Sort extends Model
 
     public function links()
     {
-        return $this->hasMany('App\Models\link');
+        return $this->hasMany('App\Models\Link');
     }
 
     public function countLink()
