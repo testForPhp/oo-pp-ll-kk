@@ -24,7 +24,7 @@ class IndexController extends Controller
     public function html()
     {
         $hostname = isset($_SERVER['REQUEST_SCHEME']) ? $_SERVER['REQUEST_SCHEME'] : 'http';
-        $host = $hostname . '://' . $_SERVER['SERVER_NAME'];
+        $host = $hostname . '://' . (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : $_SERVER['SERVER_ADD']);
 
         $index = file_get_contents($host . '/okdsdkjhjkmn');
         $this->createHtml($index,'index.html');
