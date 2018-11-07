@@ -106,7 +106,7 @@ class LinksController extends Controller
                 return $this->returnResponse(['message'=>'余额不足，请前往充值','code'=>2]);
             }
 
-            $user->point = $user->point - $user->point;
+            $user->point = $user->point - $feeCache->color;
 
             if(!$user->save()){
                 return $this->returnResponse(['message'=>'提交失败！'],400);
@@ -122,7 +122,7 @@ class LinksController extends Controller
             ]);
 
            if(! $feelog){
-               $user->point = $user->point + $user->point;
+               $user->point = $user->point + $feeCache->color;
                $user->save();
                return $this->returnResponse(['message'=>'提交失败，请稍后重试！'],500);
            }
@@ -138,7 +138,7 @@ class LinksController extends Controller
 
         if($pay == 1){
             $feelog->delete();
-            $user->point = $user->point + $user->point;
+            $user->point = $user->point + $feeCache->color;
             $user->save();
         }
 
