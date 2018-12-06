@@ -34,7 +34,7 @@ class AdsController extends Controller
             'link' => 'required',
             'id' => 'required'
         ]);
-        $data = $request->only(['img','link','sort','id']);
+        $data = $request->only(['img','link','sort','id','user_id']);
 
         if($request->has('status')){
             $data['status'] = 0;
@@ -55,7 +55,7 @@ class AdsController extends Controller
             'img' => 'required',
             'link' => 'required'
         ]);
-        $data = $request->only(['img','link','sort']);
+        $data = $request->only(['img','link','sort','user_id']);
 
         if($request->has('status')){
             $data['status'] = 0;
