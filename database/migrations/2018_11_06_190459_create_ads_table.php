@@ -18,7 +18,7 @@ class CreateAdsTable extends Migration
             $table->integer('user_id')->index();
             $table->string('link');
             $table->string('img');
-            $table->integer('sort');
+            $table->integer('sort')->default(0);
             $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });
