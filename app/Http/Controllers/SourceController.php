@@ -60,7 +60,7 @@ class SourceController extends Controller
         if (empty($url)) {
             return false;
         }
-        $reg = '/^((http|https):\/\/)?([^\/]+)/i';
+        $reg = '/^(http[s]?:\/\/)?([^\/]+)/i';
         $matches = array();
         preg_match($reg, $url, $matches);
         $surec = $matches[2];
