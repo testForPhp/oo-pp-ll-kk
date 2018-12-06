@@ -92,6 +92,8 @@ class LinksController extends Controller
             if($color != ''){
                 $data['color'] = $color;
             }
+        }else{
+            $data['color'] = '';
         }
 
         if($request->has('type')){
