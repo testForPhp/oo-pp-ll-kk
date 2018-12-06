@@ -91,9 +91,9 @@ class LinksController extends Controller
             $color = $request->get('color');
             if($color != ''){
                 $data['color'] = $color;
+            }else{
+                $data['color'] = '';
             }
-        }else{
-            $data['color'] = '';
         }
 
         if($request->has('type')){
